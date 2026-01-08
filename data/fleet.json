@@ -1,0 +1,102 @@
+[
+    {
+        "id": "car_001",
+        "name": "Toyota Yaris (or similar)",
+        "type": "economy",
+        "fuel": "petrol",
+        "transmission": "manual",
+        "seats": 5,
+        "bags": 2,
+        "pricePerDay": 29,
+        "deposit": 400,
+        "badge": "Best value",
+        "featured": true
+    },
+    {
+        "id": "car_002",
+        "name": "VW Polo Automatic (or similar)",
+        "type": "economy",
+        "fuel": "petrol",
+        "transmission": "automatic",
+        "seats": 5,
+        "bags": 2,
+        "pricePerDay": 36,
+        "deposit": 500,
+        "featured": true
+    },
+    {
+        "id": "car_003",
+        "name": "Toyota Corolla Hybrid (or similar)",
+        "type": "compact",
+        "fuel": "hybrid",
+        "transmission": "automatic",
+        "seats": 5,
+        "bags": 3,
+        "pricePerDay": 45,
+        "deposit": 600,
+        "badge": "Popular",
+        "featured": true
+    },
+    {
+        "id": "car_004",
+        "name": "Peugeot 3008 (or similar)",
+        "type": "suv",
+        "fuel": "diesel",
+        "transmission": "automatic",
+        "seats": 5,
+        "bags": 4,
+        "pricePerDay": 62,
+        "deposit": 800,
+        "featured": true
+    },
+    {
+        "id": "car_005",
+        "name": "Nissan Qashqai (or similar)",
+        "type": "suv",
+        "fuel": "petrol",
+        "transmission": "manual",
+        "seats": 5,
+        "bags": 4,
+        "pricePerDay": 55,
+        "deposit": 750,
+        "featured": false
+    },
+    {
+        "id": "car_006",
+        "name": "Mercedes E-Class (or similar)",
+        "type": "luxury",
+        "fuel": "diesel",
+        "transmission": "automatic",
+        "seats": 5,
+        "bags": 4,
+        "pricePerDay": 120,
+        "deposit": 1500,
+        "badge": "Premium",
+        "featured": false
+    },
+    {
+        "id": "car_007",
+        "name": "VW Caddy (or similar)",
+        "type": "van",
+        "fuel": "diesel",
+        "transmission": "manual",
+        "seats": 7,
+        "bags": 5,
+        "pricePerDay": 78,
+        "deposit": 900,
+        "featured": false
+    },
+    {
+        "id": "car_008",
+        "name": "Electric Compact (or similar)",
+        "type": "compact",
+        "fuel": "electric",
+        "transmission": "automatic",
+        "seats": 5,
+        "bags": 3,
+        "pricePerDay": 70,
+        "deposit": 1000,
+        "badge": "EV",
+        "featured": false
+    }
+]

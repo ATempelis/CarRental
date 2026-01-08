@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SwiftRent | Car Rentals</title>
+    <meta name="description" content="Modern car rental website template with booking-ready structure." />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="index.html" aria-label="SwiftRent Home">
+                <img src="assets/logo.svg" alt="" class="brand-logo" />
+                <span class="brand-name">SwiftRent</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" data-nav>
+                <a href="fleet.html">Fleet</a>
+                <a href="booking.html">Book</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a class="btn btn-primary btn-sm" href="booking.html">Get a Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h1>Rent a car in minutes. Drive with confidence.</h1>
+                    <p class="muted">
+                        A modern, responsive car rental website with a clean path to connect your booking API later.
+                    </p>
+
+                    <form class="card form-grid" id="quick-quote">
+                        <div class="field">
+                            <label for="pickup">Pick-up location</label>
+                            <input id="pickup" name="pickup" type="text" placeholder="Athens Airport" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="pickDate">Pick-up</label>
+                            <input id="pickDate" name="pickDate" type="date" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="dropDate">Drop-off</label>
+                            <input id="dropDate" name="dropDate" type="date" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="category">Category</label>
+                            <select id="category" name="category">
+                                <option value="any">Any</option>
+                                <option value="economy">Economy</option>
+                                <option value="compact">Compact</option>
+                                <option value="suv">SUV</option>
+                                <option value="van">Van</option>
+                                <option value="luxury">Luxury</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary" type="submit">Search availability</button>
+                        <p class="small muted">This demo uses mocked availability. Replace later via
+                            <code>js/api.js</code>.</p>
+                    </form>
+
+                    <div class="trust-row">
+                        <div class="trust-pill">Free cancellation options</div>
+                        <div class="trust-pill">Transparent pricing</div>
+                        <div class="trust-pill">Mobile-first booking flow</div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-card">
+                        <div class="hero-card-top">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="hero-card-body">
+                            <div class="mock-car"></div>
+                            <div class="mock-lines">
+                                <div class="line w90"></div>
+                                <div class="line w75"></div>
+                                <div class="line w60"></div>
+                            </div>
+                            <div class="mock-price">
+                                <span class="tag">From</span>
+                                <span class="price">€29/day</span>
+                            </div>
+                            <a class="btn btn-outline" href="fleet.html">Browse fleet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Featured vehicles</h2>
+                    <p class="muted">Hand-picked examples. Full list and filters are in Fleet.</p>
+                </div>
+
+                <div class="grid cards" id="featured"></div>
+
+                <div class="section-cta">
+                    <a class="btn btn-primary" href="fleet.html">View all vehicles</a>
+                    <a class="btn btn-ghost" href="booking.html">Go to booking</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section soft">
+            <div class="container info-grid">
+                <div class="info">
+                    <h3>Built for API integration</h3>
+                    <p class="muted">
+                        Availability search, quote calculation, and booking submission are routed through a single API
+                        layer.
+                        Replace mock endpoints without rebuilding the UI.
+                    </p>
+                </div>
+                <div class="info">
+                    <h3>Responsive and accessible</h3>
+                    <p class="muted">
+                        Mobile navigation, scalable typography, and form controls tuned for phones and tablets.
+                    </p>
+                </div>
+                <div class="info">
+                    <h3>Fast, static hosting</h3>
+                    <p class="muted">
+                        Works on GitHub Pages, Netlify, Cloudflare Pages, or any static host. No build step required.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <div>
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="" class="brand-logo" />
+                    <strong>SwiftRent</strong>
+                </div>
+                <p class="small muted">Demo car rental website template. Connect your booking API when ready.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="fleet.html">Fleet</a>
+                <a href="booking.html">Book</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom small muted">
+            <span>© <span id="year"></span> SwiftRent. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" id="toast"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

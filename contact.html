@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SwiftRent | Contact</title>
+    <meta name="description" content="Contact SwiftRent." />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="index.html" aria-label="SwiftRent Home">
+                <img src="assets/logo.svg" alt="" class="brand-logo" />
+                <span class="brand-name">SwiftRent</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" data-nav>
+                <a href="fleet.html">Fleet</a>
+                <a href="booking.html">Book</a>
+                <a href="about.html">About</a>
+                <a class="active" href="contact.html">Contact</a>
+                <a class="btn btn-primary btn-sm" href="booking.html">Get a Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h1>Contact</h1>
+                    <p class="muted">Send a message. This demo simulates submission.</p>
+                </div>
+
+                <div class="two-col">
+                    <form class="card form-grid" id="contactForm">
+                        <div class="field">
+                            <label for="cName">Name</label>
+                            <input id="cName" name="name" type="text" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="cEmail">Email</label>
+                            <input id="cEmail" name="email" type="email" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="cTopic">Topic</label>
+                            <select id="cTopic" name="topic">
+                                <option value="booking">Booking question</option>
+                                <option value="fleet">Fleet / pricing</option>
+                                <option value="support">Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="field full">
+                            <label for="cMsg">Message</label>
+                            <textarea id="cMsg" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button class="btn btn-primary" type="submit">Send message (demo)</button>
+                        <p class="small muted">In production, wire this to your backend or CRM.</p>
+                    </form>
+
+                    <aside class="card">
+                        <h2 class="h3">Company details</h2>
+                        <p class="muted small">
+                            Replace these with your real address, phone and operating hours.
+                        </p>
+
+                        <div class="kv">
+                            <div><span class="muted">Phone</span><strong>+30 210 000 0000</strong></div>
+                            <div><span class="muted">Email</span><strong>info@swrentrent.example</strong></div>
+                            <div><span class="muted">Hours</span><strong>Mon–Sun 08:00–22:00</strong></div>
+                            <div><span class="muted">Location</span><strong>Athens, Greece</strong></div>
+                        </div>
+
+                        <div class="notice">
+                            <strong>API integration note</strong>
+                            <p class="small muted">
+                                Contact and booking calls should go through a single domain and consistent error
+                                handling.
+                                This template already follows that pattern via <code>js/api.js</code>.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <div>
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="" class="brand-logo" />
+                    <strong>SwiftRent</strong>
+                </div>
+                <p class="small muted">We respond quickly during business hours.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="fleet.html">Fleet</a>
+                <a href="booking.html">Book</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom small muted">
+            <span>© <span id="year"></span> SwiftRent. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" id="toast"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
